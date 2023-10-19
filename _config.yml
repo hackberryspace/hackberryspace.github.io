@@ -2,7 +2,7 @@ email:              arslan_aysenur@outlook.com
 description:
 author:             Aysenur Arslan
 baseurl:            "/"
-# url:                "https://hackberryspace.github.io"
+url:                ""
 
 # Social Profiles
 twitter_username:
