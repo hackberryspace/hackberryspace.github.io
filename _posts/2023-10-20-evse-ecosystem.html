@@ -1,0 +1,202 @@
+---
+layout: post
+title: "Cyber Security of XFC/EVSE Ecosystem"
+subtitle: ""
+date: 2023-10-19 12:00:00 -0500
+background: '/img/posts/02.JPG'
+---
+<style>
+p{
+  text-align: justify;
+}
+
+aside{
+  text-align: justify;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+</style>
+
+<p>There are industry forecasts that the number of electric vehicles used worldwide will be more than 169 million by 2030. The number of electric vehicles on the road in 2022 was over <a href="https://www.iea.org/reports/global-ev-outlook-2023/trends-in-electric-light-duty-vehicles">26 million</a>. . This rapid increase will also trigger an increase in the number of charging stations.</p>
+
+<p >Before charging stations are built, the criticality situations of the transportation and utility electric sectors are inspected, but are cyber security risks and attack interfaces analyzed?</p>
+<aside>
+  <i>
+💡 The importance of cyber security is understood better every year. Although studies on vehicle cyber security have begun in the past, the regulations and standards in this field are quite new. Within the EV/XFC ecosystem, different domains and different areas need to work together. A security vulnerability or cyber attack can affect the entire ecosystem. Considering that it also includes critical infrastructure, the consequences may be much more severe.
+</i>
+</aside>
+
+<p>NIST published the Cyber Security Framework Profile for Electric Vehicle Extreme Fast Charging Infrastructure document as a draft in July 2023. EV/XFC Cyber Security Profile offers a risk-based approach to managing threats to systems, networks and assets in the EV/XFC ecosystem.</p>
+<h4 id="-our-goal-is-to-create-cybersecurity-awareness-in-the-ev-xfc-ecosystem">🧭 Our goal is to create cybersecurity awareness in the EV/XFC ecosystem</h4>
+<blockquote>
+<p>Assets and interfaces in EV/XFC systems should be examined from a cyber security perspective and risk analyzes should be made. In order to protect this ecosystem from cyber attacks, solutions should be developed without disrupting the working order of the system.</p>
+</blockquote>
+<h1 id="-ev-xfc-ecosystem">⚖️ EV/XFC Ecosystem</h1>
+<p>Before going into the details of this profile, knowing the domains/systems in the EV/EXFC ecosystem will help us understand the profile better.</p>
+
+
+<p><img src="/img/posts/evse/1.png"></p>
+<p>As you can see, there are four main domains, and they all communicate with each other directly or indirectly.</p>
+<h3 id="-ev-electric-vehicle-"><strong>EV</strong>(Electric Vehicle)</h3>
+<p>Motorcycles, cars, EVToL (electric vehicle take-off landing), drones, aircraft and electric commercial vehicles (Tractor-trailers, buses, construction vehicles…) are also in this category.</p>
+EV;
+<ul>
+<li>communicates with the internal systems of the battery, motors and charging unit via CAN(Controller Area network).</li>
+<li>communicates with the charger via the physical connector.</li>
+<li>communicates with Cloud/Third Party Services via Bluetooth/Wi-Fi or cellular network.</li>
+</ul>
+
+<p>EV Critical hardware components may include head unit system, onboard diagnostic interfaces, telematics control units, central gateway modules, battery management systems, electronic control units and communications controllers.</p>
+
+<h3 id="xfc-evse-extreme-fast-charging-electric-vehicle-supply-equipment-">
+  XFC/EVSE (Extreme Fast Charging/Electric Vehicle Supply Equipment)
+</h3>
+<p>It will be used as EVSE instead of XFC/EVSE in the rest of the document. EVSE includes all the equipment that provides electricity for charging the EV. It covers electrical conductors, battery systems, converters, software that communicates with cloud/third party services, and communication protocols. <br><br>
+In addition, EVSE connects to Cloud/Third Party Services and receives EVSE's location information, payment transactions and other services.<br><br>
+XFC/EVSE critical hardware components may include charging station controllers, power module controls, protection circuits, power conversion systems, supply equipment communications controllers, thermal management systems, human-machine interfaces, and EVSE metering equipment.</p>
+<h3 id="cloud-third-party-organizations">Cloud/Third Party Organizations</h3>
+<p>These are the services that manage the communication between the EV user, EV and EVSE. EV user can learn EVSE location, make reservations and make payment. Statistical calculations can be made with the stored data. <br><br>Cloud/Third Party Critical hardware components may include physical data centers, network equipment, servers or storage devices.</p>
+<h3 id="utilities-building-systems">Utilities/Building Systems</h3>
+<p>Utilities/Building Systems provide the power needed for the EV/XFC ecosystem. These systems monitor power usage, see devices connected to the network, and communicate with control systems. In this way, it helps control the energy demands in the field.</p>
+<p>Utility/Building critical hardware components may include power distribution units, remotely controlled breakers, local circuit protection, and generation/storage grid systems.</p>
+<p>There are points that organizations and interested parties in the EV/XFC ecosystem that use or produce EV/XFC services, systems, and related components should pay attention to. Companies producing software/hardware, providing infrastructure for the EV/XFC ecosystem are worried about what path to follow. </p>
+<p>This profile provides a methodology to identify and evaluate the potential impacts of cyber attacks on the EV/XFC ecosystem.</p>
+<p>Organizations within the EV/XFC ecosystem should create a cybersecurity profile according to their mission and business goals. In this way, it can prioritize cyber security activities.</p>
+<p>The profile specific to this organization created should answer the following questions:</p>
+<ul>
+<li>What are your organization&#39;s mission goals with the EV/XFC ecosystem?</li>
+<li>Have critical assets, interfaces, and processes been identified?</li>
+<li>Does the organization have a precaution/disaster recovery plan to ensure business continuity during and after a cyber attack?</li>
+</ul>
+<p>To ensure cyber security effectively in this ecosystem:</p>
+<ul>
+<li>Secure communication protocols and methods should be used</li>
+<li>Systems should be designed as cyber resilience, and continuity of operation should be ensured.</li>
+<li>Reliable Relationships Should Be Established with Partners (Customer, Supply Chain, Stakeholders)</li>
+</ul>
+<p>The EV/XFC ecosystem’s communications infrastructure is vulnerable to various operational and cyber security threats.  Ensuring <strong>reliable communication</strong> is vital for reliable performance in this ecosystem. The internal communication of EVs, including user systems, infotainment systems, charge controllers and battery managements, must be secure. Additionally, it is crucial to take extra precautions to ensure that connections made with external sources are also secure. </p>
+<p>Let’s imagine a scenario where you have to travel 5 hours and need to charge your electric vehicle on the way. Using the vehicle’s infotainment system, you can ask for the nearest charging station by saying “Find Station Location”.  The infotainment system communicates with Cloud/Third Party Services to provide information on the nearest station and even make a reservation for you. However, this communication involves sharing some of your information with Cloud/Third Party Services, which is a potential vulnerability for malicious attacks ☠️ ⚠️
+Once you arrive at the nearest charging station, the station confirms your reservation with the Cloud and communicates with the Utility/Building System to draw power from mains.  This communication is also a potential attack interface☠️ ⚠️ </p>
+<p>The Utility/Building System provides its consumers with the ability to manage their consumption habits using Cloud/Third Party Services, which again, may be a vulnerability to cyber-attacks.☠️ ⚠️  The charging process starts between the EV’s battery management system and the charging station, which is another potential attack interface ☠️ ⚠️  At the end of the charging process, the EVSE communicates with the Cloud for financial transactions, and the Cloud is also to collect and update maintenance logs ☠️ ⚠️ . All these communications between different systems involve potential attack interfaces, which can be exploited by cybercriminals.</p>
+<p><img src="/img/posts/evse/scenario.jpg"></p>
+<p>Potential attack interfaces are noted. A problem that may occur in the security of access to critical infrastructure systems, communication with the Cloud, EVSE and EV Communication may directly or indirectly affect the entire system.</p>
+<p>Let's assume that the attacker has access to the EVSE system and the vehicle can change the current values during charging. It may cause physical damage to the battery. This may not only result in battery expense but may also lead to situations such as the battery exploding or harming the user.</p>
+<blockquote>
+
+<p>A study about Singapore IoT Labelling was published in October 2020. A label should be prepared for each IoT device and this label contains information about the device, its last update date, when it will be updated, access control and security mechanism. I think that IoT labeling should be done especially for EVSE to ensure reliability in the EV/XFC ecosystem.</p>
+<p><img src="/img/posts/evse/3.png"></p>
+</blockquote>
+
+<p>The EV/XFC ecosystem, which is considered critical infrastructure, must have <strong>cyber resilience</strong>. <strong>So what is Cyber Resilience?</strong></p>
+<p>It expresses the strength of systems against cyber attacks and how quickly systems can regain normal functionality after attacks. When trying to ensure cyber resilience, measures that restrict the usability of systems should be avoided.</p>
+<p>Cyber attacks that occur in systems without cyber resilience cause the product quality and reliability of the organization to be questioned.</p>
+<p>Failure of EVSE to return to its functionality quickly after the attack may cause you to not be able to charge your vehicle on a road where there is not even a local market and you may suffer for hours.</p>
+<p>Operation continuity must be ensured. Potential risks should be identified and structures should be established to detect abnormal behavior. Emergency plans and disaster recovery plans should be prepared.</p>
+<p>It is crucial to establish <strong>trustworthy relationships</strong> with many partners in EV/XFC ecosystem. Every domain must prioritize cyber security awareness and work towards addressing this issue. Partners include EVSE manufacturer, supply chain, Cloud/Third Party Services, stakeholder. Disclosing sensitive information about our partners can damage their reputation and lead to financial loss, which can ultimately undermine trust in EV manufacturers.
+In the event of an attack on Cloud/Third Party Services, EV users may become concerned about their private information being compromised such as their credit card details, work/home location, and car parking spaces. Therefore, it is essential to determine and share supply chain risk management processes with our partners. </p>
+<p>There are five major phases to effectively manage cyber security risks for the EV/XFC ecosystem. </p>
+<p><img src="/img/posts/evse/4.png"></p>
+<blockquote>
+<p>As mentioned before, every organization should customize in line with its business goals and objectives. Cyber security risks should be identified and a strategy should be created for them.</p>
+</blockquote>
+<p>In the identify phase, in the EV/XFC ecosystem;</p>
+<ul>
+<li>Business and operational purposes of all domains should be determined.</li>
+<li>All assets (hardware/software) should be identified, their criticality levels should be determined, and the roles and responsibilities of the personnel should be determined.</li>
+<li>Existing security vulnerabilities should be examined and potential threats and vulnerabilities should be identified.</li>
+</ul>
+<p>Effective risk management should be created by considering all these definitions. Since the Identify phase will also affect other stages, a meticulous study must be conducted.</p>
+<p><strong>Physical devices/systems and software applications/platforms must be kept in the inventory list, and the list must be up to date.</strong></p>
+<p>This list should include software/hardware versions, security patches, update dates, how it was updated (cable/WIFI/USB), update history, known bugs/security vulnerabilities, etc. A detailed list facilitates the security management of outdated or risky inventory.</p>
+<p>This should be done for any rented or subcontracted inventory, not just what the organization owns. This list should also include the criticality levels of the assets. This will help with prioritization. Integrity control mechanisms should be used to verify the integrity of software, hardware, firmware, and information. (secure communication channel standards, digital signatures)
+It should be determined what course of action will be taken when assets reach their end of life, and the data they contain should be irreversibly deleted. If necessary, the entity must be physically destroyed. We have our accounts, payment information, and personal data on XFC/EVSE and Cloud/Third Party Services. Cloud/third-party providers must comply with PCIDSS-compliant retention and destruction policies.</p>
+<p>A flexible structure should also be created for new hardware/software to be added to the systems.</p>
+<p><strong>Communication and data flows must be monitored and mapped.</strong></p>
+<p>Mapped data flows allow us to understand systems better, see attack surfaces better, and detect unnecessary connections. The communication and encryption protocols used, sensors, endpoints, associated connectors, or possible connection points can be detected.</p>
+<p>Not only the domains themselves but also the domain&#39;s connections with other domains should be mapped. (EVSE domain connects to both the Cloud and the Utility domain.)</p>
+<p>Each ECU should be included when mapping the EV. The direction of communication should be indicated.</p>
+<p>The XFC/EVSE must be designed so that it is responsible for the transmission of only the data necessary to perform its functions.</p>
+<p>Cloud/Third Party Services&#39; data flow diagram should include interactions with external partners and assets.</p>
+<p>In the diagram, PLCs, HMIs, and SCADA systems, in addition to the Utility/Building Management System, should be shown.</p>
+<p>Network segmentation can be provided within and between domains. If EV and Cloud networks are separated, an attack or vulnerability in one domain is prevented from spreading to the other. In-vehicle battery management, infotainment, and charging control systems can be divided into different segments. At the same time, EVSE battery energy storage systems and communication units can be divided into separate segments. Additionally, creating a separate network for financial transactions will provide higher security.</p>
+<p>Considered as our external connection point, the Cloud is an important attack surface. Network segmentation should be done, and secure communication protocols should be used. It is recommended to use IDS and IPS.</p>
+<p>External information systems should be cataloged, and processes and agreements regarding their use should be established.</p>
+<p><strong>Cybersecurity roles and responsibilities for all employees and third-party stakeholders (suppliers, customers, partners) should be clearly defined and shared with partners/subcontractors. In addition, specific people must be appointed to supervise and manage the cyber security processes of the partners.</strong></p>
+<p>In all domains, especially for EV and EVSE, development should be carried out by taking security requirements into account in all development life cycle processes, from the design phase to after-sales support. Cyber security roles and responsibilities in each phase should be determined for each domain. Penetration testing should be performed when each component reaches a certain maturity level. In this way, weaknesses can be identified during the development phase of the project and precautions can be taken early.
+Security studies that begin at the design phase will provide us with safe access, safe configuration, and safe use.</p>
+<p><img src="/img/posts/evse/5.png"></p>
+<p>The roles and place of the four main domains in the XFC/EVSE ecosystem in the supply chain should be defined, which is important for cyber security risk management decisions. Some of the roles and responsibilities in the supply chain:</p>
+<p>EV manufacturers should inform their customers and partners/stakeholders about their ability to communicate with secure charging infrastructure.</p>
+<p>There should be mechanisms in place to alert customers of any risky situations occurring within the EV/XFC ecosystem.</p>
+<p>In the EV/XFC ecosystem, different operating principles must be adopted for normal operation and under attack. Systems must be cyber-resilient.</p>
+<p>Alternative ways should be considered in case the EV charging communication with EVSE is broken, or there is a problem in energy production. (Agreement with rival EVSE)</p>
+<p>If the Cloud/Third Party Service provides data storage or processing services to its customers, it is responsible for secure transmission and secure storage. Situations such as who will have access to this data should be considered.</p>
+<p>Cloud/third-party providers and Utility/Building Management must understand the functioning of the ecosystem and their dependencies and determine services according to the needs of their partners.</p>
+<p><strong>Organizations must have cybersecurity policies, procedures, and process documents.</strong> These documents, which form the basis of the cybersecurity strategy, should be taken into account to ensure the interoperability of systems in the entire EV/XFC ecosystem.
+Cyber security roles and responsibilities between internal and external partners should also be determined. Having previously identified inventories, known weaknesses in these assets must be identified and documented.</p>
+<p>Utility/Building Management systems are critical infrastructures, and these structures, which have been in service for a long time, may not be up to date. Updating these systems may also cause us to experience additional problems. In cases with no redundancy in critical infrastructure systems, it may be necessary to detect security vulnerabilities and increase precautions for them instead of updating them.</p>
+<p>Typical scanning tools may not detect vulnerabilities in EV/XFC ecosystem software. Knowledgeable and experienced personnel are needed. Security developments and EV/XFC ecosystem threat reports should be reviewed regularly.</p>
+<p>When an attacker exploits vulnerability, the situation that arises is a threat. Risk assessment should be prepared by considering both areas, not just IT or OT.</p>
+<p><img src="/img/posts/evse/6.png"></p>
+<p>My reference book when preparing a risk assessment is NIST 800-30. This standard explains everything very clearly. In summary, Assets, threats, and threat sources are determined. The characteristic capability, intent, and targeting of the threat source are determined. The risk is calculated with the relevance and severity of the threat event, likelihood-initiated attack success, overall likelihood, and level of impact values. Risks are prioritized, and countermeasures are defined. I recommend that Risk Assessment be done during the project is design phase.</p>
+<p>There will also be risks such as supply chain interruptions, technological compatibility, and non-fulfillment of contractual obligations. <strong>Dependence on a single source should be reduced, and alternative solutions should be produced for unexpected situations.</strong> A comprehensive and clear agreement should be made with suppliers/partners. (responsibilities, expectations, quality standards, disruption situations, etc. should be clearly stated).</p>
+<p><strong>The roles and responsibilities of all stakeholders in the supply chain should be determined. Supply chain risk management processes should be prepared from a cybersecurity perspective.</strong> Microcontrollers, sensors, electrical cables, and connectors that affect the functionality of critical components should also be included in the risk assessment. These structures can affect the overall system.</p>
+<p>The protection phase is very important for services to continue uninterrupted and safely in the EV/XFC ecosystem.</p>
+<p><strong>Authentication and management are very important for the EV/XFC ecosystem.</strong> Authentication and auditing is required for authorized devices, users, and transactions. It should be ensured that only authorized users can access the systems (especially for EVSE).</p>
+<ul>
+<li>Access attempts and device activities should be recorded, and a monitoring structure should be established.</li>
+<li>Physical connection points must be protected. If it is unnecessary, it should be disabled or removed.</li>
+</ul>
+<p>As the number of EVs increases, the need for EVSE will also increase. Sometimes it can be in the city center, and sometimes it can be on a deserted mountain road. Considering its geographical distribution, it is a very attractive target for attackers. For such cases, tampering protection, alarms or sensors should be used. Additionally, the charging cable must be protected against tampering. Systems for surveillance around EVSE may be considered.</p>
+<p>Remote access to systems within the ecosystem (especially EVSE) may be required, and specific policies and guidelines must be determined. Access permissions and authorization should be made according to the principle of least privilege. Access permissions should be checked regularly. Permissions deemed unnecessary should be removed by adhering to the procedure and providing the necessary information. With methods such as role-based access control, users and devices can access only the resources they need.
+In addition to authentication, automatic timeout should be implemented. (OTA updates of EV, payment by EV owner through EVSE)</p>
+<p>To ensure secure and usable communication, all data and systems connected to the network must be audited and protected. We talked about the segmentation of the network in the definition section; the system/device/person who will access each segment must be determined, and authorization must be made.</p>
+<p>For high-risk connections, additional authentication and authorization will be more secure. For example, when changing system settings or protocols, performing updates, and accessing payment accounts.</p>
+<p><strong>Cyber security awareness training should be provided to all business partners in the EV/XFC ecosystem (not only developers system engineers but also everyone who operates and maintains the systems).</strong></p>
+<p>This training should give information about what to do before, during, and after the attack.</p>
+<p>Everyone within the ecosystem should know the privileged user definitions and their authority within the system, and authorized user accounts should be used accordingly.</p>
+<p>The roles and responsibilities of Third Party Stakeholders (customer, supplier, partner) have been defined, but the awareness of these partners should be tested and evaluated at certain intervals.</p>
+<p>A general culture is formed when senior managers/partners attach importance to cyber security.</p>
+<p><strong>Data security requirements of areas within the EV/XFC ecosystem should be determined, and responsibilities should be defined.</strong></p>
+<p>All data should be encrypted and stored in tamper-proof locations. Authorized users must access data in data-at-rest, in-transmit, and use status, and those who provide access must be logged and audited. Secure and tamper-proof communication systems and protocols should be used when transferring data (wired/wireless). Data in the communication channel must be encrypted.</p>
+<p><strong>Capacity should be managed effectively within the EV/XFC ecosystem, and continuous availability should be ensured.</strong> The performance of the systems should be monitored regularly, and capacity problems should be detected early. When a system is interrupted, a redundant transmission system should be used. To ensure redundancy, systems must be backed up regularly. Additionally, load-balancing methods prevent access interruptions caused by intense user activity (DoS Attack).</p>
+<p>Development and testing environments should be separated from the production environment. A secure development life cycle should be adopted in the development environment. CI/CD pipeline can be established. The possible effects of software and hardware updates should be analyzed in the test environment and then distributed to the relevant devices.</p>
+<p>For the production environment, structures should be established to handle the vulnerability identification and management processes. To be informed about and manage vulnerabilities in software versions and operating versions.</p>
+<p><img src="/img/posts/evse/7.png"></p>
+<p>In addition, it should be remembered that the physical working environment may affect the function and security of IT and OT components. Policies or regulations should exist for criteria such as fire protection, lighting, and temperature.</p>
+<p><strong>Maintenance and repair of industrial control systems and information system components within the EV/XFC ecosystem must be carried out in accordance with policies and procedures.</strong></p>
+<p>Approved tools should be used in the maintenance and repair processes of IT&amp;OT system components, and the transactions should be recorded and shared with relevant partners.</p>
+<p>When creating procedures, the issue of remote access and maintenance should also be addressed. Unauthorized access must be prevented, and access must be recorded. Manual confirmation and multi-factor authentication can be provided in critical places where remote access is required.</p>
+<p><strong>Security solutions and audit logs must be managed in accordance with the policy.</strong></p>
+<p>The policy should also include information on the following topics.</p>
+<ul>
+<li>How long the logs will be kept,</li>
+<li>use and encrypted use of portable media,</li>
+<li>Issues such as the phone connected to the infotainment area, malware scanning for USB,</li>
+<li>Use and configuration of network protection devices (IDS/IPS, Firewalls, Antivirus programs…)</li>
+</ul>
+<p><img src="/img/posts/evse/8.png"></p>
+<p><strong>Detect processes and policies should be determined to detect cyber security incidents in the EV/XFC ecosystem. We must keep our systems up to date and constantly improve them.</strong> <strong>Information systems, networks, and assets should be monitored to detect cyber security incidents in the EV/XFC ecosystem promptly.</strong> (Disadvantages: IT &amp; OT systems work interdependently.).</p>
+<p>Monitoring the network includes the inter-units in the ecosystem and the network within the EV (the vehicle&#39;s central network module, control units, etc.)</p>
+<p>External service provider activities (remote access to systems, software updates, configuration changes) should be monitored, recorded, and audited.</p>
+<p><strong>Systems must have the ability to detect anomalies. A guide should be prepared on what to do in case of an anomaly. This guide should also include information such as who is responsible for which systems, who to contact in case of emergency, and what basic precautions should be taken in which system.</strong></p>
+<p><img src="/img/posts/evse/9.png"></p>
+<p>When a cyber attack is detected, the target and methods of the attack should be analyzed. In this way, attack vectors and weaknesses will be better understood. Information from other systems and networks connected to the entity affected by the incident should be collected and analyzed. This collected information should also be shared with system administrators and other relevant teams.</p>
+<p><strong>Personnel should be considered as an insider threat in cyber security.</strong> Policies and procedures should be created for the termination of employment contracts of personnel or specific situations. Personnel should be given as much authority as necessary regarding a system. Precautions, such as requiring at least two personnel authorizations for critical systems (defined in the introduction), may be taken. Personnel activities on the systems should be monitored, and the changes they make should be logged.</p>
+<blockquote>
+<p>Software and code pieces that are transmitted over a network to receive information from remote systems and do not require installation or code execution at the receiver are called mobile code.</p>
+</blockquote>
+<p><strong>Mobile codes must be checked. If unnecessary, its use should be prevented.</strong></p>
+<p>Respond procedures should be prepared to limit the impact of cyber security incidents in the EV/XFC ecosystem<strong>. According to the prepared response procedures, a cyber security incident should be taken under control, and the incident should be communicated to those responsible for the system/s by reporting its impact.</strong></p>
+<p>Quick and effective actions must be taken to control the incidents, reduce their effects, and resolve the incident promptly.</p>
+<p>For the solutions in the response process to be more effective and improved, situations that require forensic investigation should be identified. Events must be categorized.</p>
+<p>Because there are so many internal and external stakeholders in the EV/XFC ecosystem, communication between systems is required to respond to cyber incidents.</p>
+<p>Past cyber security attack experiences should be leveraged, and cyber security information should be shared between areas in the EV/XFC system. It may be necessary to update response strategies periodically.</p>
+<p>In the EV/XFC ecosystem, the system affected by a cybersecurity incident must return to normal operations on time. This may sometimes involve reinstalling, updating, and making changes, so recovery plans and processes must be defined.</p>
+<p>The time elapsed since the cyber incident, description of the incident, recovery plan/activities, dependencies of internal/external systems, and effects on internal/external partners should be determined. The recovery process is achieved faster with timely and effective communication.</p>
+<p>Recovery plans, processes, and procedures are implemented to ensure the reconstruction of systems or assets affected by cybersecurity incidents. The rescue plan can be implemented at the time of the incident or afterward.</p>
+<p>Sharing information within the ecosystem will enable them to examine response plans and take precautions in other areas.</p>
+<p>You are aware of the size of the ecosystem and that we live with a bomb that has been unplugged at the center of our lives.</p>
+<p><strong>Have you implemented any cybersecurity measures for the EV/XFC ecosystem? Let us know if you need any help with it.</strong></p>

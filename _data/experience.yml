@@ -1,0 +1,36 @@
+# Jobs
+# Cyber Security Specialist
+- company: Brace Automotive
+  position: Cyber Security Specialist
+  duration: Feb, 2023 &mdash; Present
+  summary: I prepare a checklist and guideline tailored to customer requirements in accordance with the R155 and ISO 21434 standards. I am also conducting cybersecurity risk analyses for projects. In these risk analyses, I simulate threat scenarios in a lab environment and carry out attacks on relevant components (ECUs, EVSE, infotainment equipment, CAN communications). I am working on the following projects:<ul class="resume-item-list"><li>Electric Car & Charging Station </li><li>Solar Panel on Car</li><li>Electric Bus</li></ul>
+
+# System Security Engineer
+- company: Aselsan, Cyber Security
+  position: System Security Engineer
+  duration:  Dec, 2019 &mdash; Oct, 2022
+  summary: I played a significant role in establishing Aselsan's cybersecurity department. Our primary objective was to ensure that all products manufactured by Aselsan were designed with a cybersecurity perspective, and to identify security vulnerabilities in the devices already produced. I actively participated in creating cybersecurity processes at Aselsan, preparing cybersecurity guidelines for military devices, and developing secure software development guides. I was responsible for defining requirements for projects, conducting software/hardware security tests, and performing penetration tests on systems after security testing. To raise cybersecurity awareness and emphasize the importance of the Zero Trust Model, I participated in various activities and meetings within the company. I collaborated with different teams on communication devices, cameras, tanks, and national combat aircraft projects.
+  summary2: I am well-versed in standards such as DO-356A, DO-326A, NIST 800-53, NIST 800-207, NIST 800-30, and NIST 800-37. I worked on the following projects:<ul class="resume-item-list"><li>VoIP </li><li>IP Crypto Device</li><li>Radio Devices</li><li>Military Secret Projects<li>TF-X (Turkish Fighter X)</li></ul>
+
+# Embedded Software Engineer
+- company: Aselsan, Cyber Security and Crypto Design
+  position: Embedded Software Engineer
+  duration:   Jun, 2017  &mdash; Dec, 2019
+  summary: I developed the authentication kernel module and the Human-Machine Interface (HMI) for IP encryption devices. I used the C programming language.
+
+- company: Aselsan, Cyber Security and Crypto Design
+  position: Candidate Engineer
+  duration:   Apr, 2017  &mdash; Jul, 2017
+  summary: Development environment setup included the establishment of a CI/CD pipeline for automatic testing of the code loaded into the IP crypto device. Scripts were written for the JDSU device (using Perl and Python languages). The CI/CD pipeline triggered the testing device, allowing automated tests to be conducted on the IP device and reports to be generated and delivered.
+
+- company: Adeo IT Consulting Services
+  position: Intern
+  duration:   Jun, 2016  &mdash; Apr, 2017
+  summary: I completed an intensive internship period with a focus on programming and cybersecurity. During this time, I worked extensively on Active Directory. I also developed a subdomain finder tool called <a hhref="https://github.com/ADEOSec/sedef">"SeDeF"</a> Additionally, I wrote scripts for Metasploit using Ruby.
+
+
+
+- company: Siyah Research and Development LLC.,
+  position: Intern
+  duration:   Jun, 2015  &mdash; Aug, 2015
+  summary: I found myself within the Linux operating system without having taken an operating systems course. During my internship, I learned how to write and compile Linux kernel modules. I made modifications to certain modules in the Linux operating system and developed a new kernel module for a project. Additionally, I prepared a report on Linux Hardening.
